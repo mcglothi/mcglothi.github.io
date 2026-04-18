@@ -156,9 +156,15 @@ section { max-width:1000px; margin:0 auto; padding:4rem 2rem; }
   display:flex; align-items:center; justify-content:space-between;
   padding-top:0.6rem; border-top:1px solid var(--border);
 }
-.card-repo { font-size:0.72rem; color:var(--dim); font-family:monospace; }
-.card-arrow { font-size:1rem; color:var(--dim); }
-.project-card:hover .card-arrow { color:var(--blue); }
+.card-footer-links { display:flex; gap:0.5rem; }
+.card-link {
+  font-size:0.72rem; font-weight:600; padding:0.28rem 0.6rem;
+  border-radius:4px; border:1px solid var(--border2);
+  color:var(--muted); transition:border-color .12s, color .12s;
+  white-space:nowrap;
+}
+.card-link:hover { text-decoration:none; border-color:var(--blue); color:var(--blue); }
+.card-link.gh:hover { border-color:var(--border2); color:var(--text); }
 
 /* ── Architecture diagram ── */
 .arch {
@@ -256,7 +262,7 @@ footer a:hover { color:var(--muted); }
 
   <div class="project-grid">
 
-    <a class="project-card" href="https://laptime.run" target="_blank">
+    <div class="project-card">
       <div class="card-header">
         <div class="card-icon" style="background:#0f1a0f;">⏱</div>
         <span class="card-tag tag-web">Web App</span>
@@ -270,12 +276,15 @@ footer a:hover { color:var(--muted); }
         </div>
       </div>
       <div class="card-footer">
-        <span class="card-repo">laptime.run</span>
-        <span class="card-arrow">→</span>
+        <div class="card-footer-links">
+          <a class="card-link" href="https://mcglothi.github.io/laptime/" target="_blank">Docs →</a>
+          <a class="card-link" href="https://laptime.run" target="_blank">Live site →</a>
+          <a class="card-link gh" href="https://github.com/mcglothi/laptime" target="_blank">GitHub</a>
+        </div>
       </div>
-    </a>
+    </div>
 
-    <a class="project-card" href="https://mcglothi.github.io/cruise-control/" target="_blank">
+    <div class="project-card">
       <div class="card-header">
         <div class="card-icon" style="background:#0d1e38;">🎛</div>
         <span class="card-tag tag-cli">Service</span>
@@ -289,12 +298,14 @@ footer a:hover { color:var(--muted); }
         </div>
       </div>
       <div class="card-footer">
-        <span class="card-repo">mcglothi/cruise-control</span>
-        <span class="card-arrow">→</span>
+        <div class="card-footer-links">
+          <a class="card-link" href="https://mcglothi.github.io/cruise-control/" target="_blank">Docs →</a>
+          <a class="card-link gh" href="https://github.com/mcglothi/cruise-control" target="_blank">GitHub</a>
+        </div>
       </div>
-    </a>
+    </div>
 
-    <a class="project-card" href="https://mcglothi.github.io/ai-hub/" target="_blank">
+    <div class="project-card">
       <div class="card-header">
         <div class="card-icon" style="background:#0d1e38;">🖥</div>
         <span class="card-tag tag-web">Web App</span>
@@ -308,12 +319,14 @@ footer a:hover { color:var(--muted); }
         </div>
       </div>
       <div class="card-footer">
-        <span class="card-repo">mcglothi/ai-hub</span>
-        <span class="card-arrow">→</span>
+        <div class="card-footer-links">
+          <a class="card-link" href="https://mcglothi.github.io/ai-hub/" target="_blank">Docs →</a>
+          <a class="card-link gh" href="https://github.com/mcglothi/ai-hub" target="_blank">GitHub</a>
+        </div>
       </div>
-    </a>
+    </div>
 
-    <a class="project-card" href="https://mcglothi.github.io/runway/" target="_blank">
+    <div class="project-card">
       <div class="card-header">
         <div class="card-icon" style="background:#1a1205;">📊</div>
         <span class="card-tag tag-app">macOS App</span>
@@ -327,12 +340,14 @@ footer a:hover { color:var(--muted); }
         </div>
       </div>
       <div class="card-footer">
-        <span class="card-repo">mcglothi/runway</span>
-        <span class="card-arrow">→</span>
+        <div class="card-footer-links">
+          <a class="card-link" href="https://mcglothi.github.io/runway/" target="_blank">Docs →</a>
+          <a class="card-link gh" href="https://github.com/mcglothi/runway" target="_blank">GitHub</a>
+        </div>
       </div>
-    </a>
+    </div>
 
-    <a class="project-card" href="https://mcglothi.github.io/ai-knowledge-base/" target="_blank">
+    <div class="project-card">
       <div class="card-header">
         <div class="card-icon" style="background:#1e1535;">🧠</div>
         <span class="card-tag tag-lib">Framework</span>
@@ -346,10 +361,12 @@ footer a:hover { color:var(--muted); }
         </div>
       </div>
       <div class="card-footer">
-        <span class="card-repo">mcglothi/ai-knowledge-base</span>
-        <span class="card-arrow">→</span>
+        <div class="card-footer-links">
+          <a class="card-link" href="https://mcglothi.github.io/ai-knowledge-base/" target="_blank">Docs →</a>
+          <a class="card-link gh" href="https://github.com/mcglothi/ai-knowledge-base" target="_blank">GitHub</a>
+        </div>
       </div>
-    </a>
+    </div>
 
   </div>
 </section>
